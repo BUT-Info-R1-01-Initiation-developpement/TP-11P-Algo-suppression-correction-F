@@ -163,6 +163,33 @@ class ListeEntiers(tabEntiers: Array<Int>) {
         return nombreOccurences
     }
 
+    /**
+     * Supprime l'élément à l'indice donné
+     * <ul>
+     *     <li> Complexité meilleur cas : O(1) (on supprime le dernier élement => on décrémente la taille)
+     *     <li> Complexité pire cas : O(n) (on supprime le premier élément => décalage de tous les éléments à droite)
+     * </ul>
+     *
+     * @param indice l'indice de l'élément à supprimer
+     *
+     * @throws IllegalArgumentException si l'indice n'est pas valide
+     */
+    fun supprimeA(indice: Int) {
+        require(indice in indices()) { "Indice invalide." }
+        for(i in indice until taille-1) {
+            this.tableauEntiers[i] = this.tableauEntiers[i +1]
+        }
+        this.taille--
+    }
+
+    /**
+     * Vide la liste de tous ses éléments.
+     * Complexité : O(1) ! Yippeeehh
+     */
+    fun vide() {
+        this.taille = 0
+    }
+
     private fun assureCapacite() {
         if (this.taille == this.capaciteReelle) {
             this.augmenteCapacite()

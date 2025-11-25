@@ -9,7 +9,7 @@ import org.junit.jupiter.api.assertThrows
 
 class ListeEntiersSuppressionsTest {
 
- /*
+
 
     // === Tests sur méthode vide()
     @Test
@@ -120,66 +120,66 @@ class ListeEntiersSuppressionsTest {
             liste.supprimeA(5)
         }
     }
+    /*
+       // === Tests sur méthode supprime()
 
-    // === Tests sur méthode supprime()
+       @Test
+       fun `test suppression d'un élément apparaissant au milieu du tableau`() {
+           // given
+           val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
+           // when
+           liste.supprime(-56)
+           // then
+           assertEquals(3, liste.taille)
+           println(liste.contenuAsString())
+           assertEquals("[12, 18, 35]", liste.contenuAsString())
+       }
 
-    @Test
-    fun `test suppression d'un élément apparaissant au milieu du tableau`() {
-        // given
-        val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
-        // when
-        liste.supprime(-56)
-        // then
-        assertEquals(3, liste.taille)
-        println(liste.contenuAsString())
-        assertEquals("[12, 18, 35]", liste.contenuAsString())
-    }
+       @Test
+       fun `test suppression d'un élément apparaissant au début`() {
+           // given
+           val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
+           // when
+           liste.supprime(12)
+           // then
+           assertEquals(3, liste.taille)
+           println(liste.contenuAsString())
+           assertEquals("[-56, 18, 35]", liste.contenuAsString())
+       }
 
-    @Test
-    fun `test suppression d'un élément apparaissant au début`() {
-        // given
-        val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
-        // when
-        liste.supprime(12)
-        // then
-        assertEquals(3, liste.taille)
-        println(liste.contenuAsString())
-        assertEquals("[-56, 18, 35]", liste.contenuAsString())
-    }
+       @Test
+       fun `test suppression d'un élément apparaissant à la fin`() {
+           // given
+           val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
+           // when
+           liste.supprime(35)
+           // then
+           assertEquals(3, liste.taille)
+           println(liste.contenuAsString())
+           assertEquals("[12, -56, 18]", liste.contenuAsString())
+       }
 
-    @Test
-    fun `test suppression d'un élément apparaissant à la fin`() {
-        // given
-        val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
-        // when
-        liste.supprime(35)
-        // then
-        assertEquals(3, liste.taille)
-        println(liste.contenuAsString())
-        assertEquals("[12, -56, 18]", liste.contenuAsString())
-    }
+       @Test
+       fun `test suppression d'un élément sur liste vide`() {
+           // given
+           val liste = ListeEntiers(emptyArray())
+           // when
+           liste.supprime(35)
+           // then
+           assertTrue(liste.isEmpty())
+       }
 
-    @Test
-    fun `test suppression d'un élément sur liste vide`() {
-        // given
-        val liste = ListeEntiers(emptyArray())
-        // when
-        liste.supprime(35)
-        // then
-        assertTrue(liste.isEmpty())
-    }
+       @Test
+       fun `test suppression d'un élément qui n'est pas dans la liste`() {
+           // given
+           val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
+           // when
+           liste.supprime(500)
+           // then
+           assertEquals(4, liste.taille)
+           println(liste.contenuAsString())
+           assertEquals("[12, -56, 18, 35]", liste.contenuAsString())
+       }
 
-    @Test
-    fun `test suppression d'un élément qui n'est pas dans la liste`() {
-        // given
-        val liste = ListeEntiers(arrayOf(12, -56, 18, 35))
-        // when
-        liste.supprime(500)
-        // then
-        assertEquals(4, liste.taille)
-        println(liste.contenuAsString())
-        assertEquals("[12, -56, 18, 35]", liste.contenuAsString())
-    }
-
- */
+    */
 }
