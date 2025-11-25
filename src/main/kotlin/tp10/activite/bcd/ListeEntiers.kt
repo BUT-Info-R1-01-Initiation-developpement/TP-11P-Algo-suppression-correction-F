@@ -218,10 +218,7 @@ class ListeEntiers(tabEntiers: Array<Int>) {
     fun supprime(element: Int) {
         val i = this.chercheAvecApprocheLineaire(element)
         if (i != -1) {
-            taille--
-            for (j in i..<taille) {
-                this.tableauEntiers[j] = this.tableauEntiers[j+1]
-            }
+            this.supprimeA(i)
         }
     }
 
